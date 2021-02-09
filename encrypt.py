@@ -14,14 +14,17 @@ def caesar_cipher(text,rotate_num):
 
     upper_value=collections.deque(string.ascii_uppercase) #upper_value = the ascii uppercase string
     lower_value=collections.deque(string.ascii_lowercase) #lower_value = the ascii lowercase string
+    digit=collections.deque(string.digits)
 
     upper_value.rotate(rotate_num) #rotates upper ascii string
     lower_value.rotate(rotate_num) #rotates lower ascii string
+    digit.rotate(rotate_num)
 
     upper=''.join(upper_value)
     lower=''.join(lower_value)
+    digit=''.join(digit)
 
-    return text.translate(str.maketrans(string.ascii_uppercase,upper)).translate(str.maketrans(string.ascii_lowercase,lower))
+    return text.translate(str.maketrans(string.ascii_uppercase,upper)).translate(str.maketrans(string.ascii_lowercase,lower)).translate(str.maketrans(string.digits,digit))
 
 
 print("(0) Caesar Cipher")
