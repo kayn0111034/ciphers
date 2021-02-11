@@ -1,3 +1,6 @@
+from encrypt import caesar_cipher
+import time
+
 print("(0) Caesar Cipher")
 choose=int(input("Which cipher do you want to use?"))
 
