@@ -1,4 +1,4 @@
-# self-coding
+# Ciphers
 
-In here you'll find some projects of mine that I did in my spare time.
+In here you can take a look at the ciphers I created and a html doc to go with it.
 Take a look!
