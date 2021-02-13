@@ -17,8 +17,9 @@
     <div>
       <section>
       <h2>Caesar Cipher</h2>
+      <p>Caesar ciphers are one of the earliest forms of ciphers.</p>
       <form action="" method="get">
-        <textarea id="caesar" name="caesar" row="5" cols="50"
+        <textarea id="caesar" name="caesar" row="5" cols="50" required minlength="2" maxlength="1000"
         placeholder="Please enter text for the encryption"></textarea>
 
         <br>
@@ -27,12 +28,14 @@
           How many times would you like to move your text?</label>
         <br>
 
-        <input list="rotation" id="rotate_num" name="rotate_num">
+        <input type="number" id="rotation" name="rotate_num" required min="-1000" max="1000"></input>
+<!--        <input list="rotation" id="rotate_num" name="rotate_num" required>
   					<datalist id="rotation">
               <option value="1 time"></option>
               <option value="2 times"></option>
               <option value="3 times"></option>
             </datalist>
+-->
         <input type="submit" id="caesar_submit" value="submit"></input>
       </form>
     </section>
