@@ -7,6 +7,12 @@
 
 }
 
+header {
+  height: 120px;
+  position: relative;
+  top: 60px;
+}
+
 h1 {
   color:black;
   font-family: 'Montserrat', sans-serif;
@@ -22,13 +28,15 @@ p {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-ol {
+li {
   padding: 0 10px;
+  display: inline-block;
 }
 
 textarea {
   padding: 0;
   margin: 5px 0;
+  border: 3px solid blue;
 }
 
 .cipher-img {
@@ -38,4 +46,57 @@ textarea {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 10px;
+}
+
+/* ul {
+  font-size: 15px;
+  padding: 10px;
+  margin: 10px;
+  width:100%;
+  float: right;
+
+  position: fixed;
+  z-index: 10;
+  text-align: center;
+  display: inline-block;
+
+  list-style-type: none;
+  border: 3px solid #466695;
+  background-color: #466695;
+
+}
+*/
+
+nav {
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  text-align: center;
+  font-size: 25px;
+
+  list-style-type:none;
+
+  height: 45px;
+  position: fixed;
+
+  border: 3px solid #466695;
+  background-color: #466695;
+
+  width: 100%;
+
+
+}
+
+nav a {
+  color: white;
+}
+
+.loc {
+  position: relative;
+}
+
+.loc ol {
+  list-style-type: upper-roman;
+}
+.loc li {
+  display: block;
 }
