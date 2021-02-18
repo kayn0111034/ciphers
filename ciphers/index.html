@@ -12,13 +12,26 @@
 
 
     <nav>
-      <ul>
-        <li><a href="#">Reverse Cipher</a></li>
-        <li><a href="#">Caesar Cipher</a></li>
-        <li><a href="#">ROT13 Cipher</a></li>
-        <li><a href="#">Transposition Cipher</a></li>
-      </ul>
+      <div class='head-left'>
+        <ul>
+          <li><a href="#RC">Reverse Cipher</a></li>
+          <li><a href="#CC">Caesar Cipher</a></li>
+          <li><a href="#ROTC">ROT13 Cipher</a></li>
+          <li><a href="#TC">Transposition Cipher</a></li>
+        </ul>
+      </div>
+      <div class='head-right'>
+        <ul>
+          <li><a href="#">EN</a></li>
+        </ul>
+    </div>
+
+
     </nav>
+
+
+
+
 
     <header>
       <h1>Code Ciphers</h1>
@@ -41,14 +54,19 @@
         decryption—a series of well-defined steps that can
         be followed as a procedure.
         It can be also referred to as a code.</p>
-      <div class="cipher-img"></div>
+      <div class="cipher-img">
+        <label for="cipher-img">
+          How many times would you like to move your text?</label></div>
     </section>
 
+    <br>
+    <br>
+    <br>
+    <br>
 
-
-    <div id="RC">
+    <div class="RC">
     <section>
-      <h2>Reverse Cipher</h2>
+      <a name="RC"><h2>Reverse Cipher</h2>
       <p>Text Here</p>
     </section>
     </div>
@@ -59,9 +77,9 @@
     <br>
     <br>
 
-    <div id="CC">
+    <div class="CC">
     <section>
-      <h2>Caesar Cipher</h2>
+      <a name="CC"><h2>Caesar Cipher</h2>
       <p>Caesar ciphers are one of the earliest forms of ciphers.</p>
       <form action="" method="get">
         <textarea id="caesar" name="caesar" row="5" cols="50" required minlength="2" maxlength="1000"
@@ -94,9 +112,9 @@
     <br>
     <br>
 
-    <div id="ROTC">
+    <div class="ROTC">
     <section>
-      <h2>ROT13 Cipher</h2>
+      <a name="ROTC"><h2>ROT13 Cipher</h2>
       <p>Text Here</p>
     </section>
     </div>
@@ -108,9 +126,9 @@
     <br>
     <br>
 
-    <div id="TC">
+    <div class="TC">
     <section>
-      <h2>Transposition Cipher</h2>
+      <a name="TC"></a><h2>Transposition Cipher</h2>
       <p>Text Here</p>
     </section>
     </div>
