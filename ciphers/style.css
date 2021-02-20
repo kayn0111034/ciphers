@@ -68,7 +68,8 @@ textarea {
 }
 */
 
-nav {
+.head-left,  /*for some reason, using nav as selector doesn't work*/
+.head-right {
   font-family: 'Montserrat', sans-serif;
   display: block;
   font-size: 25px;
@@ -80,33 +81,31 @@ nav {
 
   padding: 5px;
   border: 3px solid black;
-  background-color: white;
+  background-color: black;
 
-  width: 100%;
   z-index: 2;
 }
 
+
+
 nav a {
-  color: blue;
+  color: white;
   text-decoration: none;
 }
 
 .head-left {
-  width: 100%; /*literally useless*/
+  width: 80%;
+  z-index: 2;
 }
 
 .head-right {
   text-align: right;
-  font-size: 25px;
+  width:20%;
 
-  margin: 0;
-  padding: 5px;
-  border: 3px solid black;
-  background-color: white;
+  position:fixed;
 
-  width:30%;
-
-  float:right;
+  right:0;
+  z-index: 2;
 }
 
 
