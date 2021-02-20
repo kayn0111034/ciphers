@@ -8,7 +8,7 @@ import time
 
 
 def caesar_cipher(text,rotate_num):
-    """Caesar Cipher. Rotates string x amount. x amount is defined by
+    """Caesar Cipher. Rotates string x amount. x amount is defined by rotate num
     """
     #Each letter of plain text is replaced by a letter with some fixed number of positions down with alphabet.
 
@@ -28,8 +28,30 @@ def caesar_cipher(text,rotate_num):
 
 
 
+def ascii_cipher():
+    """caesar cipher but the all ascii characters except whitespace and reoccuring letters
+    """
+    letters=collections.deque(string.ascii_letters)
+    numbers=collections.deque(string.digits)
+    punctuation=collections.deque(string.punctuation)
+
+    characters=collections.deque(letters+numbers+punctuation)
+
+    rotated=characters.rotate(2)
+
+    before_rotate_string = ''.join(characters)
 
 
+
+    #rot_string=''.join(rotated)
+
+
+    print(rotated)
+    print(before_rotate_string)
+    print(characters)
+    #return text.translate(str.maketrans(before_rotate_string,rot_string))
+
+ascii_cipher()
 #testing ascii letters & deque's rotate func
 # print(string.ascii_uppercase)
 # print(string.ascii_lowercase)
