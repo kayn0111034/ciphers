@@ -28,7 +28,7 @@ def caesar_cipher(text,rotate_num):
 
 
 
-def ascii_cipher():
+def ascii_cipher(text,rotate_num):
     """caesar cipher but the all ascii characters except whitespace and reoccuring letters
     """
     letters=collections.deque(string.ascii_letters)
@@ -36,22 +36,20 @@ def ascii_cipher():
     punctuation=collections.deque(string.punctuation)
 
     characters=collections.deque(letters+numbers+punctuation)
+    compare=collections.deque(letters+numbers+punctuation)
 
-    rotated=characters.rotate(2)
+    characters.rotate(2)
 
-    before_rotate_string = ''.join(characters)
+    compared=''.join(compare)
+    moved_string= ''.join(characters)
+
+    return text.translate(str.maketrans(compared,moved_string))
 
 
 
-    #rot_string=''.join(rotated)
 
 
-    print(rotated)
-    print(before_rotate_string)
-    print(characters)
-    #return text.translate(str.maketrans(before_rotate_string,rot_string))
 
-ascii_cipher()
 #testing ascii letters & deque's rotate func
 # print(string.ascii_uppercase)
 # print(string.ascii_lowercase)
