@@ -28,9 +28,16 @@ p {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: blue;
+}
+
 li {
-  padding: 0 10px;
-  display: inline-block;
+  padding: 20px;
+  margin: 0 5px;
+  display: list-item;
+  list-style-type: decimal;
 }
 
 textarea {
@@ -68,6 +75,11 @@ textarea {
 }
 */
 
+li {
+  display: list-item;
+  padding: 0 5px;
+}
+
 .head-left,  /*for some reason, using nav as selector doesn't work*/
 .head-right {
   font-family: 'Montserrat', sans-serif;
@@ -86,7 +98,10 @@ textarea {
   z-index: 2;
 }
 
-
+.head-left li,
+.head-right li {
+  display: inline-block;
+}
 
 nav a {
   color: white;
@@ -109,7 +124,11 @@ nav a {
 }
 
 
+ol,
+ul {
+  color:black;
 
+}
 
 .loc {
   position: relative;
@@ -117,9 +136,8 @@ nav a {
 }
 
 .loc ol {
+  margin: 5px;
+  padding: 20px;
   list-style-type: upper-roman;
-}
-.loc li {
-  display: block;
-  list-style-type: upper-roman; /* idk how to make list get back number i tried everything*/
+  display: list-item;
 }
