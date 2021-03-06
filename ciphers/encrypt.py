@@ -45,7 +45,9 @@ def ascii_cipher(text,rotate_num):
 
     return text.translate(str.maketrans(compared,moved_string))
 
-
+def reverse_cipher(text):
+    reversed=text[::-1]
+    return reversed
 
 
 
