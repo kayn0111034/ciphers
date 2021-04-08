@@ -1,9 +1,10 @@
-from encrypt import caesar_cipher, ascii_cipher, reverse_cipher
+from encrypt import caesar_cipher, ascii_cipher, reverse_cipher, XOR_cipher
 import time
 
 print("(0) Caesar Cipher")
 print("(1) Ascii Cipher")
 print("(2) Reverse Cipher")
+print("(3) XOR Cipher")
 
 choose=int(input("Which cipher do you want to use?"))
 
@@ -28,8 +29,9 @@ if choose==2:
     end = time.time()
     print(f"It took {end-start} seconds to encrypt your text")
 if choose==3:
-    text=input("Please enter text for encryption:")
+    text=input("Please enter text for the encryption: ")
+    k=input("please enter your key for the encryption (has to be same length):")
     start = time.time()
-    print(reverse_cipher(text))
+    print(XOR_cipher(text,k))
     end = time.time()
     print(f"It took {end-start} seconds to encrypt your text")

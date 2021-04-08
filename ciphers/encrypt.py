@@ -49,33 +49,41 @@ def reverse_cipher(text):
     reversed=text[::-1]
     return reversed
 
-def binary_represent(text):
+def readable_binary_represent(text):
+    #for ease of viewing
     input=text
     binary=' '.join(format(ord(i), '08b') for i in input)
-    print(binary)
+    return binary
+
+def binary_represent(text):
+    #for XOR_cipher
+    input=text
+    binary=''.join(format(ord(i), '08b') for i in input)
+    return binary
 
 def XOR_cipher(text,k):
     cipher_text=[]
     if len(text) == len(k):
         plaintext=binary_represent(text)
         key=binary_represent(k)
-        print(plaintext)
-        print(key)
+        #print(plaintext)
+        #print(key)
         i=0
-        for j in range(len(text)):
+        for j in range(len(plaintext)):
             if plaintext[i]==key[i]:
                 cipher_text.append('0')
                 i+=1
             else:
                 cipher_text.append('1')
                 i+=1
-        print(cipher_text)
+            if i % 8==0:
+                cipher_text.append(' ')
+        actual_cipher=''.join(cipher_text)
+        return actual_cipher
     else:
         raise IndexError
 
-binary_represent('654321')
-XOR_cipher('123456','654321')
-
+#binary_represent('two')
 #testing ascii letters & deque's rotate func
 # print(string.ascii_uppercase)
 # print(string.ascii_lowercase)
