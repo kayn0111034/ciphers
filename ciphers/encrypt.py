@@ -49,9 +49,31 @@ def reverse_cipher(text):
     reversed=text[::-1]
     return reversed
 
+def binary_represent(text):
+    input=text
+    binary=res = ' '.join(format(ord(i), '08b') for i in input)
+    print(binary)
 
+def XOR_cipher(text,k):
+    cipher_text=[]
+    if len(text) == len(k):
+        plaintext=binary_represent(text)
+        key=binary_represent(k)
+        print(plaintext)
+        print(key)
+        i=0
+        for j in range(len(text)):
+            if plaintext[i]==key[i]:
+                cipher_text.append('0')
+                i+=1
+            else:
+                cipher_text.append('1')
+                i+=1
+        print(cipher_text)
+    else:
+        raise IndexError
 
-
+XOR_cipher('onetwo3','someon1')
 #testing ascii letters & deque's rotate func
 # print(string.ascii_uppercase)
 # print(string.ascii_lowercase)
