@@ -51,7 +51,7 @@ def reverse_cipher(text):
 
 def binary_represent(text):
     input=text
-    binary=res = ' '.join(format(ord(i), '08b') for i in input)
+    binary=' '.join(format(ord(i), '08b') for i in input)
     print(binary)
 
 def XOR_cipher(text,k):

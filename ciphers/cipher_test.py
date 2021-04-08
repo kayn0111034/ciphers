@@ -27,3 +27,9 @@ if choose==2:
     print(reverse_cipher(text))
     end = time.time()
     print(f"It took {end-start} seconds to encrypt your text")
+if choose==3:
+    text=input("Please enter text for encryption:")
+    start = time.time()
+    print(reverse_cipher(text))
+    end = time.time()
+    print(f"It took {end-start} seconds to encrypt your text")
