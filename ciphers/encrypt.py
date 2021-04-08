@@ -73,7 +73,9 @@ def XOR_cipher(text,k):
     else:
         raise IndexError
 
-XOR_cipher('onetwo3','someon1')
+binary_represent('654321')
+XOR_cipher('123456','654321')
+
 #testing ascii letters & deque's rotate func
 # print(string.ascii_uppercase)
 # print(string.ascii_lowercase)
