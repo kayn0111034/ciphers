@@ -16,9 +16,9 @@ def caesar_cipher(text,rotate_num):
     lower_value=collections.deque(string.ascii_lowercase) #lower_value = the ascii lowercase string
     digit=collections.deque(string.digits)
 
-    upper_value.rotate(rotate_num) #rotates upper ascii string
-    lower_value.rotate(rotate_num) #rotates lower ascii string
-    digit.rotate(rotate_num)
+    upper_value.rotate(26-rotate_num) #rotates upper ascii string
+    lower_value.rotate(26-rotate_num) #rotates lower ascii string
+    digit.rotate(26-rotate_num)
 
     upper=''.join(upper_value)
     lower=''.join(lower_value)
